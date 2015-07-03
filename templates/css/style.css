@@ -1,0 +1,23 @@
+.content{
+  padding: 81px 0;
+}
+.task_list{
+ padding: 30px 0;
+}
+.cbox{
+  text-align:right;
+}
+.done{
+  text-decoration: line-through;
+}
+.alert{
+  margin-top:20px;
+  margin-bottom:0;
+}
+.tab-pane{
+  padding-top: 30px;
+}
+/* Correcting Metrial Design CSS*/
+.navbar{
+    height: initial !important;
+}

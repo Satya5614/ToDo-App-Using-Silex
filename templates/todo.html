@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO APP</title>
+    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+        <link rel="stylesheet" href="../templates/css/style.css">
+        <style>
+    		.cbox{
+    			text-align: right;
+    		}
+    	</style>
+    </head>
+    <body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" style="height:initial;">
+		  <div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="#">ToDo List</a>
+			</div>
+		  </div>
+		</nav>
+
+		<div class="container">
+			<div class="content">
+                {% include 'groups.html' %}
+			</div>
+		</div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal" style="bottom:initial;top:25% !important;">
+            <div class="modal-content text-center">
+                <form action="" method="post">
+                    <div class="input-field">
+                        <input value="" id="modalTaskField" name="body" type="text" class="validate" autofocus>
+                        <label for="body"></label>
+                        <input value="" id="taskId" name="id" type="text" hidden="hidden">
+                        <input value="" id="groupId" name="group_id" type="text" hidden="hidden">
+                    </div>
+                    <button class="btn" type="submit" name="action" id="modalTaskSave">SAVE</button>
+                </form>
+            </div>
+        </div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+        <script src="../templates/js/script.js"></script>
+    </body>
+</html>

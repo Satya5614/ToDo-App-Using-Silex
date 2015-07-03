@@ -1,0 +1,30 @@
+{% for group in groups %}
+
+{% endfor %}
+<div role="tabpanel">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    {% for group in groups %}
+        <li role="presentation" {% if group.id == active_group_id %} class="active" {% endif %}><a href="#gid{{group.id}}" aria-controls="home" role="tab" data-toggle="tab">{{group.name}}</a></li>
+    {% endfor %}
+    <li role="presentation"><a href="#addGroup" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></li>
+    <li role="presentation" style="float:right;"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    {% for group in groups %}
+        <div role="tabpanel" class="tab-pane {% if group.id == active_group_id %} active {% endif %}" id="gid{{group.id}}">
+            {% include 'add_task.html' with { 'group_id': group.id } %}
+            {% block content %}{% endblock %}
+            {% include 'tasks.html' with { 'group_id': group.id } %}
+        </div>
+    {% endfor %}
+    <div role="tabpanel" class="tab-pane" id="addGroup">
+        Add New Group
+    </div>
+    <div role="tabpanel" class="tab-pane" id="settings">
+        Settings
+    </div>
+  </div>
+</div>
