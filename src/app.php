@@ -26,9 +26,9 @@ $app->register(new ServicesServiceProvider(), array(
 $db_options = array(
     'driver' => 'pdo_mysql',
     'dbname' => 'todo',
-    'host' => 'satya5614-silextodoapp-1642865',
-    'user' => 'satya5614',
-    'password' => '',
+    'host' => 'YOUR-HOST-NAME',
+    'user' => 'USERNAME',
+    'password' => 'PASSWORDs',
     'charset' => 'utf8'
 );
 
